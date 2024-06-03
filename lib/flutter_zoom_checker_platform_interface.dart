@@ -8,8 +8,7 @@ abstract class FlutterZoomCheckerPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static FlutterZoomCheckerPlatform _instance =
-      MethodChannelFlutterZoomChecker();
+  static FlutterZoomCheckerPlatform _instance = MethodChannelFlutterZoomChecker();
 
   /// The default instance of [FlutterZoomCheckerPlatform] to use.
   ///
@@ -24,7 +23,15 @@ abstract class FlutterZoomCheckerPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<bool> isZoomed() {
+  Future<bool?> isZoomed() {
     throw UnimplementedError('isZoomed() has not been implemented.');
+  }
+
+  Future<bool?> isDefault() {
+    throw UnimplementedError('isDefault() has not been implemented.');
+  }
+
+  Future<bool?> isMoreSpace() {
+    throw UnimplementedError('isMoreSpace() has not been implemented.');
   }
 }

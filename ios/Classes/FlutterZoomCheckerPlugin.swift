@@ -12,6 +12,10 @@ public class FlutterZoomCheckerPlugin: NSObject, FlutterPlugin {
     switch call.method {
     case "isZoomed":
         result(UIScreen.main.nativeScale>UIScreen.main.scale)
+    case "isDefault":
+        result(UIScreen.main.nativeScale==UIScreen.main.scale)
+    case "isMoreSpace":
+        result(UIScreen.main.nativeScale<UIScreen.main.scale)
     default:
       result(FlutterMethodNotImplemented)
     }

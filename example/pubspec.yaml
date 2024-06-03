@@ -6,9 +6,12 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.1.4 <4.0.0'
 dependencies:
+  device_info_plus: ^10.1.0
+  open_settings_plus: ^0.3.3
   flutter:
     sdk: flutter
   flutter_zoom_checker:
+    path: ../
 
 dev_dependencies:
   flutter_test:

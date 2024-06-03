@@ -10,8 +10,17 @@ class MethodChannelFlutterZoomChecker extends FlutterZoomCheckerPlatform {
   final methodChannel = const MethodChannel('flutter_zoom_checker');
 
   @override
-  Future<bool> isZoomed() async {
-    final version = await methodChannel.invokeMethod<bool>('isZoomed');
-    return version ?? false;
+  Future<bool?> isZoomed() async {
+    return await methodChannel.invokeMethod<bool?>('isZoomed');
+  }
+
+  @override
+  Future<bool?> isDefault() async {
+    return await methodChannel.invokeMethod<bool?>('isDefault');
+  }
+
+  @override
+  Future<bool?> isMoreSpace() async {
+    return await methodChannel.invokeMethod<bool?>('isMoreSpace');
   }
 }
